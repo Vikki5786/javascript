@@ -153,4 +153,75 @@ public class SumOfNumbers {
 }
 OUTPUT:The sum of n Numbers are all : 10
 
-/////
+/////FACTORIAL NUMBERS:
+
+public class Factorial {
+	public static void main(String args[]) {
+		int k;
+		k=factorial(5);
+		System.out.println(k);
+	}
+	static int factorial(int i) {
+		int a=1;
+		int fac =1;
+		while(a<=i) {
+			fac =fac*a;
+			a=a+1;
+		}
+		return fac;
+	}
+}
+OUTPUT:120
+/////STAR PROGRAM:
+
+public class Star {
+	public static void main(String args[]) {
+		int row =1;
+		int col ;
+		while(row<=9) {
+			col=1;
+			while(col<row) {
+				System.out.print("*");
+				col++;
+			}
+			System.out.println();
+			row++;
+		}
+	}
+}
+
+OUTPUT:
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+/////PRIME NUMBERS COUNT:
+
+public class PrimeCount {
+	public static void main(String args[]) {
+		int a,count =0;
+		a=2;
+		while(a<=100) {
+			if(countPrime(a)) {
+				count++;
+			}
+			a++;
+		}
+		System.out.println(count);
+	}
+	static boolean countPrime(int i) {
+		int a=2;
+		while(a<i) {
+			if(i%a==0)
+				return false;
+			a++;
+		}
+		return true;
+	}
+}
+OUTPUT: 25
